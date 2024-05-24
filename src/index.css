@@ -454,6 +454,72 @@ img{
   color: var(--text-color-light);
   margin-top: 3.5rem;
 }
+/* ============================ kontakt*/
+
+.contact{
+  display: flex;
+  padding: 6rem;
+}
+
+.contactText{
+  margin: 0 20px;
+  max-width: 60%;
+  width: auto;
+}
+.form{
+  display: block;
+}
+
+.formDivs{
+  display: block;
+  margin-bottom: 1.2rem;
+}
+.formLabel{
+  display: block;
+  font-size: var(--h3-font-size);
+}
+.formInput{
+  display: block;
+}
+.smallInput{
+  background: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  color: black;
+  font-weight: 500;
+  padding: 5px;
+}
+.bigInput{
+  background: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  color: black;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 10px;
+  resize: none;
+}
+.smallInput:focus {
+  outline: none;
+}
+.bigInput:focus {
+  outline: none;
+}
+.submitBtn{
+  display: block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  transition: .3s;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.submitBtn:hover{
+  background-color: var(--first-color-alt);
+}
+
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px){
