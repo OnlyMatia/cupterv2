@@ -493,12 +493,14 @@ img{
 .formLabel {
   display: block;
   font-size: var(--h3-font-size);
+  color: var(--first-color);
 }
 
 .formInput {
   display: block;
   width: 100%; 
   box-sizing: border-box; 
+  border: 1px solid black;
 }
 
 .smallInput {
