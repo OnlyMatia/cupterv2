@@ -2,6 +2,8 @@ import { useState } from "react"
 import emailjs from "@emailjs/browser"
 
 const ContactForm = () => {
+  const [mailSent, setMailSent] = useState<boolean>(false)
+
     const [data, setData] = useState({
         user_name:"",
         user_email:"",
@@ -31,17 +33,18 @@ const ContactForm = () => {
                 user_email:data.user_email,
                 user_message:data.user_message
             })
-        .then(response => {
-            console.log(response);
+        .then(() => {
+            setMailSent(true)
+            
         })
         .catch((error) => {
             console.log(error);
         })
     }
-
+    
 
   return (
-    <form className="form" onSubmit={sendEmail}>
+    mailSent ? <div className="emailParag"><p>Email poslan!</p></div> : <form className="form" onSubmit={sendEmail}>
 
       <div className="formDivs">
         <label className="formLabel">Ime i Prezime:</label>

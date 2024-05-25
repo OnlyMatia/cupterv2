@@ -456,32 +456,52 @@ img{
 }
 /* ============================ kontakt*/
 
-.contact{
-  display: flex;
-  padding: 6rem;
+.emailParag{
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+  max-width: 100%; 
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 0 20px; 
+  text-align: center;
 }
 
-.contactText{
-  margin: 0 20px;
-  max-width: 60%;
-  width: auto;
+.contact {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 2rem;
+  flex-direction: column; 
 }
-.form{
+
+.contactText, .form {
+  max-width: 100%; 
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 0 20px; 
+}
+
+.form {
   display: block;
 }
 
-.formDivs{
+.formDivs {
   display: block;
   margin-bottom: 1.2rem;
 }
-.formLabel{
+
+.formLabel {
   display: block;
   font-size: var(--h3-font-size);
 }
-.formInput{
+
+.formInput {
   display: block;
+  width: 100%; 
+  box-sizing: border-box; 
 }
-.smallInput{
+
+.smallInput {
   background: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: 3px;
@@ -489,7 +509,8 @@ img{
   font-weight: 500;
   padding: 5px;
 }
-.bigInput{
+
+.bigInput {
   background: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: 3px;
@@ -499,13 +520,13 @@ img{
   padding: 10px;
   resize: none;
 }
-.smallInput:focus {
-  outline: none;
-}
+
+.smallInput:focus,
 .bigInput:focus {
   outline: none;
 }
-.submitBtn{
+
+.submitBtn {
   display: block;
   background-color: var(--first-color);
   color: #FFF;
@@ -513,15 +534,18 @@ img{
   border-radius: .5rem;
   transition: .3s;
   border: none;
-  margin: 0 auto;
   cursor: pointer;
+  font-family: inherit;
 }
-.submitBtn:hover{
+
+.submitBtn:hover {
   background-color: var(--first-color-alt);
 }
 
-
 /*========== MEDIA QUERIES ==========*/
+
+
+
 @media screen and (min-width: 576px){
   .home__container,
   .about__container,
@@ -551,6 +575,10 @@ img{
 }
 
 @media screen and (min-width: 768px){
+  .contact{
+    flex-direction: row !important;
+    padding: 6rem;
+  }
   body{
     margin: 0;
   }
@@ -618,6 +646,7 @@ img{
   .app__container{
     column-gap: 7rem;
   }
+  
 }
 
 /* For tall screens on mobiles y desktop*/

@@ -37,7 +37,7 @@ const Footer = () => {
                     <ul>
                         <li>BiH - Mostar</li>
                         <li>Fra Ljudevita Laste BB</li>
-                        <li>063 - 319 - 290</li>
+                        <li >063 - 319 - 290</li>
                         <li>hercegovacka.izba@gmail.com</li>
                     </ul>
                 </div>
