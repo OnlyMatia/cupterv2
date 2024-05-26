@@ -1,6 +1,24 @@
+import { useEffect } from "react";
 import ContactForm from "../components/ContactForm"
 
 const Contact = () => {
+  useEffect(() => {
+    if (window.ScrollReveal) {
+        const sr = window.ScrollReveal({
+            origin: 'top',
+            distance: '30px',
+            duration: 2000,
+            reset: false
+        });
+        sr.reveal(`.contact, .form`, {
+            interval: 200
+        });
+    } else {
+        console.error('ScrollReveal nije učitan');
+    }
+}, []);
+
+
   return (
     <section className="contact">
 
