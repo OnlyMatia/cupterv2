@@ -2,7 +2,7 @@ import ContactForm from "../components/ContactForm"
 
 const Contact = () => {
   return (
-    <section className="contact" >
+    <section className="contact">
 
       <div className="contactText">
         <h2 className="section-title contact__initial">Kontaktirajte nas  </h2>

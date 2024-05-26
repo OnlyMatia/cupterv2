@@ -538,6 +538,31 @@ img{
   background-color: var(--first-color-alt);
 }
 
+
+.aboutBanners {
+  background-image: url(/public/aboutus.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vh; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem;
+}
+.bannerH2 {
+  font-size: var(--h1-font-size);
+  color: #fff;
+  margin: 0;
+  margin-bottom: 1rem; 
+}
+.aboutCupter{
+  height: 100vh;
+  background: black;
+}
+
+
+
 /*========== MEDIA QUERIES ==========*/
 
 
@@ -571,6 +596,22 @@ img{
 }
 
 @media screen and (min-width: 768px){
+  
+  .aboutBanners {
+    background-position: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6rem;
+    margin-top: var(--header-height);
+    height: 70vh;
+ 
+  }
+
+  .bannerH2 {
+    margin-bottom: 0; /* Uklonite dodatni razmak pri dnu za veće uređaje */
+  }
+
+
   .contact{
     flex-direction: row !important;
     padding: 6rem;
@@ -629,6 +670,10 @@ img{
 }
 
 @media screen and (min-width: 960px){
+  .contact{
+    flex-direction: row !important;
+    padding: 9rem;
+  }
   .bd-container{
     margin-left: auto;
     margin-right: auto;

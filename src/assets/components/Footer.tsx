@@ -28,7 +28,7 @@ const Footer = () => {
                     <h3 className="footer__title">Informacije</h3>
                     <ul>
                         <li><a href="https://www.facebook.com/hercegovacki.cupter?mibextid=ZbWKwL" target="_blank" className="footer__link">Događaji</a></li>
-                        <li><a href="tel: +38763319290" className="footer__link">Poziv</a></li>
+                        <li><a href="tel: +38763319290" target="_blank" className="footer__link">Poziv</a></li>
                         <li><a href="https://wa.me/+38763319290" target="_blank" className="footer__link">Whatsapp</a></li>
                     </ul>
                 </div>
