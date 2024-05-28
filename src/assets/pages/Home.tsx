@@ -63,7 +63,7 @@ const Home = () => {
             
             <section className="services section bd-container" id="services">
                 <span className="section-subtitle"></span>
-                <h2 className="section-title">Šta Vam Nudimo</h2>
+                <h2 className="section-title">Što Vam Nudimo</h2>
 
                 <div className="services__container  bd-grid">
                     <div className="services__content">

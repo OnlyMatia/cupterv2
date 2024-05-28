@@ -549,19 +549,24 @@ img{
   align-items: flex-end;
   justify-content: center;
   padding: 2rem;
+  box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.5);
 }
 .bannerH2 {
-  font-size: var(--h1-font-size);
+  font-size: var(--biggest-font-size);
   color: #fff;
   margin: 0;
   margin-bottom: 1rem; 
 }
-.aboutCupter{
-  height: 100vh;
-  background: black;
+
+.article-title{
+  font-size: var(--h1-font-size);
+  color: var(--text-color);
+  padding: 2rem;
 }
-
-
+.article-desc{
+  line-height: 2rem;
+  color: var(--text-color);
+}
 
 /*========== MEDIA QUERIES ==========*/
 
@@ -577,7 +582,7 @@ img{
 
   .about__data, .about__initial,
   .app__data, .app__initial,
-  .contact__container, .contact__initial{
+  .contact__container, .contact__initial, .aboutus__data{
     text-align: initial;
   }
 
@@ -604,7 +609,6 @@ img{
     padding: 6rem;
     margin-top: var(--header-height);
     height: 70vh;
- 
   }
 
   .bannerH2 {
