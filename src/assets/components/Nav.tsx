@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const Nav = () => {
+  const route = window.location.pathname;
   const darkTheme = 'dark-theme';
   //const iconTheme = 'bx-sun';
 
@@ -37,6 +38,7 @@ const Nav = () => {
       toggle(!smallMenu)
   }
 
+  
   return (
     <header className="l-header" id="header">
       <nav className="nav bd-container">
@@ -44,11 +46,11 @@ const Nav = () => {
 
         <div className={smallMenu ? 'nav__menu' : 'nav__menu show-menu'} id="nav-menu">
           <ul className="nav__list">
-            <li className="nav__item"><a href="/home" className="nav__link active-link">Početna</a></li>
-            <li className="nav__item"><a href="/about" className="nav__link">O nama</a></li>
+            <li className="nav__item"><a href="/home" className={`nav__link ${route === "/home" || route==="/" ? "active-link" : ""}`}>Početna</a></li>
+            <li className="nav__item"><a href="/about" className={`nav__link ${route === "/about" ? "active-link" : ""}`}>O nama</a></li>
             {/* <li className="nav__item"><a href="/services" className="nav__link">Usluge</a></li> */}
-            <li className="nav__item"><a href="/prices" className="nav__link">Cjenik</a></li>
-            <li className="nav__item"><a href="/contact" className="nav__link">Kontakt</a></li>
+            <li className="nav__item"><a href="/prices" className={`nav__link ${route === "/prices" ? "active-link" : ""}`}>Cjenik</a></li>
+            <li className="nav__item"><a href="/contact" className={`nav__link ${route === "/contact" ? "active-link" : ""}`}>Kontakt</a></li>
             <li><i className={`bx ${icon} change-theme`} id="theme-button" onClick={handleThemeToggle}></i></li>
           </ul>
         </div>
