@@ -52,7 +52,7 @@ const Home = () => {
                     <div className="about__data">
                         <span className="section-subtitle about__initial">O Nama</span>
                         <h2 className="section-title about__initial">Hercegovačka izba je obiteljski posao</h2>
-                        <p className="about__description">Što je ćupter i kako se pravi nije tajna. Slastica je u Hercegovini još od antičkog doba, a prvi pisani trag od 1660-ih. Naša misija je ponuditi gotov proizvod na trpeze širom Bosne i Hercegovine i bliže regije.</p>
+                        <p className="about__description">Što je cupter i kako se pravi nije tajna. Slastica je u Hercegovini još od antičkog doba, a prvi pisani trag od 1660-ih. Naša misija je ponuditi gotov proizvod na trpeze širom Bosne i Hercegovine i bliže regije.</p>
                         <a href="/about" className="button">Ćupter</a>
                     </div>
 
