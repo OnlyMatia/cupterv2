@@ -560,17 +560,14 @@ img{
 
 .article-title{
   font-size: var(--h1-font-size);
-  color: var(--text-color);
-  padding: 2rem;
+  color: var(--first-color);
+  padding: 2rem 2rem 2rem 0;  
 }
 .article-desc{
   line-height: 2rem;
   color: var(--text-color);
 }
 
-.aboutus{
-
-}
 
 /*========== MEDIA QUERIES ==========*/
 
@@ -616,7 +613,7 @@ img{
   }
 
   .bannerH2 {
-    margin-bottom: 0; /* Uklonite dodatni razmak pri dnu za veće uređaje */
+    margin-bottom: 0;
   }
 
 
@@ -678,6 +675,11 @@ img{
 }
 
 @media screen and (min-width: 960px){
+  .article-desc{
+    -webkit-columns: 250px 2;
+    -webkit-column-gap: 40px;
+    font-size: var(--normal-font-size);
+  }
   .contact{
     flex-direction: row !important;
     padding: 9rem;
