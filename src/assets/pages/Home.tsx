@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ShopCard from "../components/ShopCard";
 
 declare global {
     interface Window {
@@ -360,29 +361,23 @@ const Home = () => {
                 <h2 className="section-title">Pakiranja</h2>
 
                 <div className="menu__container bd-grid">
-                    <div className="menu__content">
-                        <img src="\img1.png" alt="" className="menu__img" />
-                        <h3 className="menu__name">Ćupter</h3>
-                        <span className="menu__detail">Žilavka ili Blatina <br/>- 1kom</span>
-                        <span className="menu__preci">€2.50</span>
-                        <a href="#" className="button menu__button"><i className='bx bx-cart-alt'></i></a>
-                    </div>
+                    <ShopCard 
+                    img="/img1.png"
+                    name="Ćupter" 
+                    desc={`1 komad ćuptera žilavka ili blatina.\n -1kom`} 
+                    price="5KM" />
 
-                    <div className="menu__content">
-                        <img src="/img2.png" alt="" className="menu__img" />
-                        <h3 className="menu__name">Poklon Kutija</h3>
-                        <span className="menu__detail">Žilavka i Blatina upakirana <br />- 2kom</span>
-                        <span className="menu__preci">€5.50</span>
-                        <a href="#" className="button menu__button"><i className='bx bx-cart-alt'></i></a>
-                    </div>
+                    <ShopCard 
+                    img="img2.png"
+                    name="Poklon Kutija" 
+                    desc={`2 komada ćuptera žilavka i blatina.\n -2kom`} 
+                    price="10KM" />
                     
-                    <div className="menu__content">
-                        <img src="\img3.png" alt="" className="menu__img" />
-                        <h3 className="menu__name">Full Box</h3>
-                        <span className="menu__detail">Veleprojana cijena/kutija žilavka ili blatina<br />- 30kom</span>
-                        <span className="menu__preci">€67.50</span>
-                        <a href="#" className="button menu__button"><i className='bx bx-cart-alt'></i></a>
-                    </div>
+                    <ShopCard 
+                    img="img3.png"
+                    name="Full Box" 
+                    desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
+                    price="150KM" />
                 </div>
             </section>
 
