@@ -567,6 +567,9 @@ img{
   line-height: 2rem;
   color: var(--text-color);
 }
+.articleImg{
+  padding: 2rem;
+}
 
 
 /*========== MEDIA QUERIES ==========*/
