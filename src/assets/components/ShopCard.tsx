@@ -7,7 +7,7 @@ const ShopCard = (props:any) => {
         <h3 className="menu__name">{props.name}</h3>
         <span className="menu__detail">{props.desc}</span>
         <span className="menu__preci">{props.price}</span>
-        <a href="/prices" className="button menu__button"><i className='bx bx-cart-alt'></i></a>
+        <a href="/menu" className="button menu__button"><i className='bx bx-cart-alt'></i></a>
     </div>
   )
 }
