@@ -39,7 +39,8 @@ const About = () => {
       id:2,
       title: "Kako se proizvodi?",
       img:"",
-      desc: `Ćupter se proizvodi od obranog crnog i bijelog grožđa, s posebnim naglaskom na sortama Blatine i Žilavke. Ove sorte čine oko 70% udjela mošta u procesu proizvodnje. Nakon gnječenja grožđa, mošt se priprema kroz filtraciju kako bi se uklonile mehaničke nečistoće i zagrijavanje radi eliminacije kvasaca. U proključali mošt dodaju se sastojci poput griza ili brašna, šećera te ostalih dodataka po recepturi, a smjesa se konstantno miješa dok ne postigne želatinoznu strukturu. Recept ćuptera također uključuje izlijevanje smjese na tanjure, koji se potom suše dan ili dva uz redovito okretanje. Gotov proizvod se reže na trakice ili štapiće veličine 10 do 15 cm. Tradicionalno se ćupter konzumira u zimskim mjesecima, često kao desert zajedno s bademima, orasima i suhim smokvama. Ponovno se javlja interes za ovim proizvodom, ne samo za kućnu konzumaciju već i kao tržišni proizvod. Agencija za sigurnost hrane je u procesu uvrštavanja Hercegovačkog ćuptera kao proizvoda s zaštićenim geografskim podrijetlom. Ćupter je tradicionalno bio popularan jer je bio jedan od rijetkih načina da se sok od grožđa sačuva od fermentacije, čineći ga jestivim dulje vrijeme nakon berbe.`
+      desc: `Ćupter se proizvodi od obranog crnog i bijelog grožđa, s posebnim naglaskom na sortama Blatine i Žilavke. Ove sorte čine oko 70% udjela mošta u procesu proizvodnje. Nakon gnječenja grožđa, mošt se priprema kroz filtraciju kako bi se uklonile mehaničke nečistoće i zagrijavanje radi eliminacije kvasaca. U proključali mošt dodaju se sastojci poput griza ili brašna, šećera te ostalih dodataka po recepturi, a smjesa se konstantno miješa dok ne postigne želatinoznu strukturu. Recept ćuptera također uključuje izlijevanje smjese na tanjure, koji se potom suše dan ili dva uz redovito okretanje. Gotov proizvod se reže na trakice ili štapiće veličine 10 do 15 cm. Tradicionalno se ćupter konzumira u zimskim mjesecima, često kao desert zajedno s bademima, orasima i suhim smokvama. Ponovno se javlja interes za ovim proizvodom, ne samo za kućnu konzumaciju već i kao tržišni proizvod. Agencija za sigurnost hrane je u procesu uvrštavanja Hercegovačkog ćuptera kao proizvoda s zaštićenim geografskim podrijetlom. Ćupter je tradicionalno bio popularan jer je bio jedan od rijetkih načina da se sok od grožđa sačuva od fermentacije, čineći ga jestivim dulje vrijeme nakon berbe.`,
+      desc2:" Napomena ćupter ne sadrži želatin!"
     },
     {
       id:3,
@@ -70,6 +71,7 @@ const About = () => {
               title={article.title} 
               desc={article.desc} 
               img={article.img}
+              desc2={article.desc2}
             />
           ))}
       </div>

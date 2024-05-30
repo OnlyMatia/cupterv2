@@ -54,7 +54,7 @@ const Home = () => {
                         <span className="section-subtitle about__initial">O Nama</span>
                         <h2 className="section-title about__initial">Hercegovačka izba je obiteljski posao</h2>
                         <p className="about__description">Što je cupter i kako se pravi nije tajna. Slastica je u Hercegovini još od antičkog doba, a prvi pisani trag od 1660-ih. Naša misija je ponuditi gotov proizvod na trpeze širom Bosne i Hercegovine i bliže regije.</p>
-                        <a href="/about" className="button">Ćupter</a>
+                        <a href="/about" className="button">Više o nama</a>
                     </div>
 
                     <img src="\aboutus2.jpg" alt="" className="about__img" />
@@ -381,15 +381,13 @@ const Home = () => {
                 </div>
             </section>
 
-            
 
-            
             <section className="contact section bd-container" id="contact">
                 <div className="contact__container bd-grid">
                     <div className="contact__data">
                         <span className="section-subtitle contact__initial">Kontaktirajte nas</span>
                         <h2 className="section-title contact__initial">Pošaljite nam poruku</h2>
-                        <p className="contact__description">Ako imate dodatnih pitanja u vezi ćuptera ili veleprodaje slobodno nas kontaktirajte preko email-a.</p>
+                        <p className="contact__description">Ako imate dodatnih pitanja u vezi ćuptera ili prodaje cuptera slobodno nas kontaktirajte preko email-a.</p>
                     </div>
 
                     <div className="contact__button">

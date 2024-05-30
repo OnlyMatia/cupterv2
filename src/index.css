@@ -571,6 +571,11 @@ img{
   padding: 2rem;
 }
 
+.important{
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: var(--first-color);
+}
 
 /*========== MEDIA QUERIES ==========*/
 

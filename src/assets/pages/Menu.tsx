@@ -1,10 +1,13 @@
 import ShopCard from "../components/ShopCard"
 
 const Menu = () => {
+  
+
+
   return (
     <section className="menu section bd-container" id="menu">
-    <span className="section-subtitle">Ćupter cijene</span>
-    <h2 className="section-title">Sve ponude</h2>
+    <span className="section-subtitle">Ćupter cijene i ponude</span>
+    <h2 className="section-title">Šta vam nudimo</h2>
 
     <div className="menu__container bd-grid">
       <ShopCard 
@@ -14,16 +17,11 @@ const Menu = () => {
         price="5KM" />
 
       <ShopCard 
-        img="img2.png"
+        img="/img2.png"
         name="Poklon Kutija" 
         desc={`2 komada ćuptera žilavka i blatina.\n -2kom`} 
-        price="10KM" />
-                    
-      <ShopCard 
-        img="img3.png"
-        name="Full Box" 
-        desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
-        price="150KM" />
+        price="10KM" 
+        />
 
       <ShopCard 
         img="img3.png"
@@ -32,16 +30,17 @@ const Menu = () => {
         price="150KM" />
 
       <ShopCard 
+        img="img4.png"
+        name="Tradicionalna kesa" 
+        desc={`5 komada ćuptera žilavka ili blatina.\n -5kom`} 
+        price="25KM" />
+
+        <ShopCard 
         img="img3.png"
         name="Full Box" 
         desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
         price="150KM" />
 
-      <ShopCard 
-        img="img3.png"
-        name="Full Box" 
-        desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
-        price="150KM" />
     </div>
 </section>
   )

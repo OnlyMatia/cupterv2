@@ -21,6 +21,7 @@ const Article = (article:any) => {
       <article className="aboutus" id={article.id}>
           <h2 className="article-title">{article.title}</h2>
           <p className="article-desc">{article.desc}</p>
+          <p className="article-desc important">{article.desc2}</p>
           <img src={article.img} alt="" className="articleImg" />
       </article>
     )
