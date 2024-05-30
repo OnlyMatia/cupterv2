@@ -10,15 +10,16 @@ import Contact from "./assets/pages/Contact";
 import Footer from "./assets/components/Footer";
 import Menu from "./assets/pages/Menu";
 import About from "./assets/pages/About";
+import NotFound from "./assets/pages/NotFound";
 
 
 const router = createBrowserRouter([
-  {path: "/", element:<Home />},
-  {path: "/home", element: <Home />},
-  {path: "/contact", element: <Contact />},
-  {path: "/about", element: <About />},
-  {path:"/menu", element: <Menu />},
-  {path: "*/*", element: <Home />}
+  {path: "/", element:<Home />, errorElement: <NotFound />},
+  {path: "/home", element: <Home />, errorElement: <NotFound />},
+  {path: "/contact", element: <Contact />, errorElement: <NotFound />},
+  {path: "/about", element: <About />, errorElement: <NotFound />},
+  {path:"/menu", element: <Menu />, errorElement: <NotFound />},
+  {path: "*/*", element: <Home />, errorElement: <NotFound />}
 ])
 
 const App = () => {
