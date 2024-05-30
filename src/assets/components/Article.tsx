@@ -18,7 +18,7 @@ const Article = (article:any) => {
 }, []);
 
     return ( 
-      <article className="aboutus">
+      <article className="aboutus" id={article.id}>
           <h2 className="article-title">{article.title}</h2>
           <p className="article-desc">{article.desc}</p>
           <img src={article.img} alt="" className="articleImg" />
