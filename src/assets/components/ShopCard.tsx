@@ -9,7 +9,7 @@ const ShopCard = (props: any) => {
         <h3 className="menu__name">{props.name}</h3>
         <span className="menu__detail">{props.desc}</span>
         <span className="menu__preci">{props.price}</span>
-        {route !== "/menu" ? <a href={route === "/menu" ? "#" : "/menu"} className="button menu__button" ><i className='bx bx-cart-alt'></i></a> : <button style={{border:"none"}} className="button menu__button" ><i className='bx bx-cart-alt'></i></button>}
+        {route !== "/menu" ? <a href={route === "/menu" ? "#" : "/menu"} className="button menu__button" ><i className='bx bx-cart-alt'></i></a> : <button style={{border:"none", cursor:"pointer"}} className="button menu__button" ><i className='bx bx-cart-alt'></i></button>}
     </div>
   )
 }
