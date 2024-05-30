@@ -143,6 +143,7 @@ img{
 }
 
 .l-header{
+  box-shadow:  0 -5px 15px rgba(7, 7, 7, 0.296);
   width: 100%;
   position: fixed;
   top: 0;
@@ -587,12 +588,56 @@ img{
   justify-content: center;
 }
 .formOrders{
-  padding: 2rem;
-  width: 50%;
+  padding: 3rem;
+  width: 100%;
 }
 
+.fixed-letter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--first-color);
+  color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
+.fixed-overlay {
+  box-shadow: -2px 0 10px rgba(7, 7, 7, 0.296);
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  width: 300px;
+  height: 100%;
+  background-color: var(--body-color); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Visok z-index da prekriva sve */
+  transition: right 0.5s ease-in-out; /* Dodavanje tranzicije */
+}
 
+.fixed-overlay.visible {
+  right: 0; /* Prikazivanje */
+}
+
+.fixed-content {
+
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+i.cart{
+  color: var(--text-color); 
+}
 
 /*========== MEDIA QUERIES ==========*/
 
@@ -627,6 +672,10 @@ img{
 }
 
 @media screen and (min-width: 768px){
+  .formOrders{
+    width: 50%;
+    padding:2rem ;
+  }
   .aboutBanners {
     background-position: center;
     align-items: center;
@@ -699,6 +748,7 @@ img{
 }
 
 @media screen and (min-width: 960px){
+  
   .article-desc{
     columns: 250px;
     column-gap: 40px;

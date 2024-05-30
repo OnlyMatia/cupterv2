@@ -31,7 +31,7 @@ const OrderForm = () => {
         emailjs.init(import.meta.env.VITE_EMAIL_USER_ID)
         emailjs.send(
             import.meta.env.VITE_EMAIL_SERVICE_ID,
-            import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+            import.meta.env.VITE_BUY_TEMPLATE_ID,
             {
                 user_name: data.user_name,
                 user_email:data.user_email,

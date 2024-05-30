@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="footer section bd-container">
             <div className="footer__container bd-grid">
                 <div className="footer__content">
-                    <a href="#" className="footer__logo">Ćupter</a>
+                    <a href="/" className="footer__logo">Ćupter</a>
                     <span className="footer__description">Tradicionalni slatkiš</span>
                     <div>
                         <a href="https://www.facebook.com/hercegovacki.cupter?mibextid=ZbWKwL" className="footer__social" target="_blank"><i className='bx bxl-facebook'></i></a>

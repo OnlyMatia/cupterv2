@@ -1,8 +1,14 @@
+import { useState } from "react";
 import OrderForm from "../components/OrderForm"
 import ShopCard from "../components/ShopCard"
 
 const Menu = () => {
+  const route = window.location.pathname
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
 
+  const toggleSidebar = () => {
+    setSidebarVisible(!isSidebarVisible);
+  };
 
   return (<>
     <section className="menu section bd-container" id="menu">
@@ -46,15 +52,26 @@ const Menu = () => {
 </section>
 
 <section className="order">
-<h2 className="section-title">U košarici:</h2>
-    <div className="menu__container bd-grid orderList">
-    
-    </div>
+<h2 className="section-title"></h2>
     <div className="orderForm">
       <OrderForm />
     </div>
     
 </section>
+{route === "/menu" && (
+        <>
+          <div className="fixed-letter" onClick={toggleSidebar}>
+          {isSidebarVisible ? <i  className='bx  bx-x cart'></i> : <i className='bx bx-cart-alt cart'></i>}
+         
+          </div>
+          <div className={`fixed-overlay ${isSidebarVisible ? 'visible' : ''}`}>
+            <div className="fixed-content">
+            
+            {/* ovdje dodajem ono sto je u kosarici */}
+            </div>
+          </div>
+        </>
+      )}
 </>
   )
 }
