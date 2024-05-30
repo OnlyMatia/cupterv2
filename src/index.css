@@ -577,6 +577,23 @@ img{
   text-decoration-color: var(--first-color);
 }
 
+.order{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.orderForm{
+  display: flex;
+  justify-content: center;
+}
+.formOrders{
+  padding: 2rem;
+  width: 50%;
+}
+
+
+
+
 /*========== MEDIA QUERIES ==========*/
 
 
@@ -610,7 +627,6 @@ img{
 }
 
 @media screen and (min-width: 768px){
-  
   .aboutBanners {
     background-position: center;
     align-items: center;

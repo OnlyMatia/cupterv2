@@ -1,10 +1,10 @@
+import OrderForm from "../components/OrderForm"
 import ShopCard from "../components/ShopCard"
 
 const Menu = () => {
-  
 
 
-  return (
+  return (<>
     <section className="menu section bd-container" id="menu">
     <span className="section-subtitle">Ćupter cijene i ponude</span>
     <h2 className="section-title">Šta vam nudimo</h2>
@@ -13,36 +13,49 @@ const Menu = () => {
       <ShopCard 
         img="/img1.png"
         name="Ćupter" 
-        desc={`1 komad ćuptera žilavka ili blatina.\n -1kom`} 
+        desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`} 
         price="5KM" />
 
       <ShopCard 
         img="/img2.png"
         name="Poklon Kutija" 
-        desc={`2 komada ćuptera žilavka i blatina.\n -2kom`} 
+        desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`} 
         price="10KM" 
         />
 
       <ShopCard 
-        img="img3.png"
-        name="Full Box" 
-        desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
-        price="150KM" />
-
-      <ShopCard 
         img="img4.png"
-        name="Tradicionalna kesa" 
-        desc={`5 komada ćuptera žilavka ili blatina.\n -5kom`} 
-        price="25KM" />
+        name="Tradicionalna vrećica" 
+        desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`} 
+        price="3KM" />
 
         <ShopCard 
         img="img3.png"
-        name="Full Box" 
-        desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
+        name="Paket Bijeli" 
+        desc={`30 komada bijelog ćuptera.\n - 30kom`} 
         price="150KM" />
+
+        <ShopCard 
+        img="img3.png"
+        name="Paket Crveni" 
+        desc={`30 komada crvenog ćuptera.\n - 30kom`} 
+        price="150KM" />
+
 
     </div>
 </section>
+
+<section className="order">
+<h2 className="section-title">U košarici:</h2>
+    <div className="menu__container bd-grid orderList">
+    
+    </div>
+    <div className="orderForm">
+      <OrderForm />
+    </div>
+    
+</section>
+</>
   )
 }
 
