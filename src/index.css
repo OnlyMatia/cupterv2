@@ -679,6 +679,8 @@ img{
 
 @media screen and (min-width: 960px){
   .article-desc{
+    columns: 250px;
+    column-gap: 40px;
     -webkit-columns: 250px 2;
     -webkit-column-gap: 40px;
     font-size: var(--normal-font-size);
