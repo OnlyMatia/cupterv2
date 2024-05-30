@@ -19,8 +19,8 @@ const Footer = () => {
                 <div className="footer__content">
                     <h3 className="footer__title">Usluge</h3>
                     <ul>
-                        <li><a href="#" className="footer__link">Dostava</a></li>
-                        <li><a href="#" className="footer__link">Cijene</a></li>
+                        <li><a href="/about" className="footer__link">Dostava</a></li>
+                        <li><a href="/prices" className="footer__link">Cijene</a></li>
                     </ul>
                 </div>
 
