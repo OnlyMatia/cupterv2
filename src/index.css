@@ -616,20 +616,19 @@ img{
   right: -300px; 
   width: 300px;
   height: 100%;
-  background-color: var(--body-color); 
+  background-color:#865804b7; 
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000; /* Visok z-index da prekriva sve */
-  transition: right 0.5s ease-in-out; /* Dodavanje tranzicije */
+  flex-direction: row;
+  z-index: 1000; 
+  transition: right 0.5s ease-in-out; 
 }
 
 .fixed-overlay.visible {
-  right: 0; /* Prikazivanje */
+  right: 0px; 
 }
 
 .fixed-content {
-
+  width: 100%;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -637,6 +636,50 @@ img{
 
 i.cart{
   color: var(--text-color); 
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+.cart-item__img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.cart-item__name {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.cart-item__price {
+  margin-right: 10px;
+}
+
+.cart-item__controls {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item__btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.cart-item__amount {
+  width: 30px;
+  text-align: center;
 }
 
 /*========== MEDIA QUERIES ==========*/

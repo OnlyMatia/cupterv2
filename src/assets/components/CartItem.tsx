@@ -1,31 +1,31 @@
-import  { useState } from 'react';
+import { useState } from "react"
 
-const CartItem = (props: any) => {
-  const [quantity, setQuantity] = useState(1);
+const CartItem = (props:any) => {
+  const [amount, setAmount] = useState(1)
+  const [price, setPrice] = useState(props.price)
 
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
+  function handleDecrease () {
+    setAmount(amount - 1);
+    setPrice(price - props.price)
+  }
 
-  const handleDecrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  function handleIncrease() {
+    setAmount(amount + 1);
+    setPrice(price + props.price)
+  }
 
+  
   return (
-    <div className="menu__content">
-        <img src={props.img} alt="" className="menu__img" />
-        <h3 className="menu__name">{props.name}</h3>
-        <span className="menu__detail">{props.desc}</span>
-        <span className="menu__preci">{props.price}</span>
-        <div className='btnSelection'>
-            <button style={{border:"none"}} className="button " onClick={handleIncrease} >+</button>
-            {quantity}
-            <button style={{border:"none"}} className="button " onClick={handleDecrease} >-</button>
-        </div>
+    <div className="cart-item">
+      <img src={props.img} className="cart-item__img" />
+      <span className="cart-item__price">{price}KM</span>
+      <div className="cart-item__controls">
+        <button onClick={handleDecrease} className="cart-item__btn">-</button>
+        <span className="cart-item__amount">{amount}</span>
+        <button onClick={handleIncrease} className="cart-item__btn">+</button>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default CartItem;
+export default CartItem

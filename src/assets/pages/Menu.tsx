@@ -1,6 +1,7 @@
 import { useState } from "react";
 import OrderForm from "../components/OrderForm"
 import ShopCard from "../components/ShopCard"
+// import CartItem from "../components/CartItem";
 
 const Menu = () => {
   const route = window.location.pathname
@@ -20,32 +21,35 @@ const Menu = () => {
         img="/img1.png"
         name="Ćupter" 
         desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`} 
-        price="5KM" />
+        price={5} />
 
       <ShopCard 
         img="/img2.png"
         name="Poklon Kutija" 
         desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`} 
-        price="10KM" 
+        price={10}
         />
 
       <ShopCard 
         img="img4.png"
         name="Tradicionalna vrećica" 
         desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`} 
-        price="3KM" />
+        price={3}
+        />
 
         <ShopCard 
         img="img3.png"
         name="Paket Bijeli" 
         desc={`30 komada bijelog ćuptera.\n - 30kom`} 
-        price="150KM" />
+        price={150}
+        />
 
         <ShopCard 
         img="img3.png"
         name="Paket Crveni" 
         desc={`30 komada crvenog ćuptera.\n - 30kom`} 
-        price="150KM" />
+        price={150} 
+        />
 
 
     </div>
@@ -65,8 +69,9 @@ const Menu = () => {
          
           </div>
           <div className={`fixed-overlay ${isSidebarVisible ? 'visible' : ''}`}>
-            <div className="fixed-content">
+            <div className="fixed-content ">
             
+
             {/* ovdje dodajem ono sto je u kosarici */}
             </div>
           </div>
