@@ -6,9 +6,14 @@ import ShopCard from "../components/ShopCard"
 const Menu = () => {
   const route = window.location.pathname
   const [isSidebarVisible, setSidebarVisible] = useState(false);
+  let orderList = []
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
+  };
+
+  const addToCart = (item:any) => {
+    console.log("Added to cart:", item);
   };
 
   return (<>
@@ -21,13 +26,15 @@ const Menu = () => {
         img="/img1.png"
         name="Ćupter" 
         desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`} 
-        price={5} />
+        price={5} 
+        addToCart={addToCart}/>
 
       <ShopCard 
         img="/img2.png"
         name="Poklon Kutija" 
         desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`} 
         price={10}
+        addToCart={addToCart}
         />
 
       <ShopCard 
@@ -35,6 +42,7 @@ const Menu = () => {
         name="Tradicionalna vrećica" 
         desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`} 
         price={3}
+        addToCart={addToCart}
         />
 
         <ShopCard 
@@ -42,6 +50,7 @@ const Menu = () => {
         name="Paket Bijeli" 
         desc={`30 komada bijelog ćuptera.\n - 30kom`} 
         price={150}
+        addToCart={addToCart}
         />
 
         <ShopCard 
@@ -49,6 +58,7 @@ const Menu = () => {
         name="Paket Crveni" 
         desc={`30 komada crvenog ćuptera.\n - 30kom`} 
         price={150} 
+        addToCart={addToCart}
         />
 
 

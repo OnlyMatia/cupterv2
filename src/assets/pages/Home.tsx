@@ -365,19 +365,19 @@ const Home = () => {
                     img="/img1.png"
                     name="Ćupter" 
                     desc={`1 komad ćuptera žilavka ili blatina.\n -1kom`} 
-                    price="5KM" />
+                    price={5} />
 
                     <ShopCard 
                     img="img2.png"
                     name="Poklon Kutija" 
                     desc={`2 komada ćuptera žilavka i blatina.\n -2kom`} 
-                    price="10KM" />
+                    price={10} />
                     
                     <ShopCard 
                     img="img3.png"
                     name="Full Box" 
                     desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
-                    price="150KM" />
+                    price={150} />
                 </div>
             </section>
 
