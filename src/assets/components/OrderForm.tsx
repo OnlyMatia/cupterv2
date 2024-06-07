@@ -3,8 +3,8 @@ import emailjs from "@emailjs/browser"
 
 
 const OrderForm = (props:any) => {
-    // const [mailSent, setMailSent] = useState<boolean>(false)
-
+    const [mailSent, setMailSent] = useState<boolean>(false)
+    const [mailFail, setMailFail] = useState<boolean>(false)
 
     const [data, setData] = useState({
         user_name:"",
@@ -56,10 +56,12 @@ const OrderForm = (props:any) => {
                 user_order: data.user_order,
             })
         .then(() => {
-            // setMailSent(true)
+            setMailSent(true)
+            props.resetOrderList();
             console.log("sent");
         })
         .catch((error) => {
+            setMailFail(true)
             console.log(error);
         })
     }
@@ -67,6 +69,7 @@ const OrderForm = (props:any) => {
 
 
   return (
+    !mailFail ? (mailSent ? <div className="emailParag"><p>Narudžba uspiješno poslana!</p></div> : 
     <form className="formOrders" onSubmit={sendEmail}>
 
       <div className="formDivs">
@@ -87,7 +90,8 @@ const OrderForm = (props:any) => {
      </div>
 
       <input type="submit" value="Naruči" className="submitBtn" />
-    </form>
+    </form>) : 
+    <div className="emailParag"><p>Neuspiješno slanje narudžbe, pokušajte opet kasnije.</p></div>
   )
 }
 

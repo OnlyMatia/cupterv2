@@ -8,7 +8,6 @@ const Menu = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
   const [orderList, setOrderList] = useState<any[]>([]);
 
-  console.log(orderList);
 
   const deleteListItem = (id: number) => {
     setOrderList((el) => el.filter((item, i) => i !== id));
@@ -49,6 +48,11 @@ const Menu = () => {
     setOrderList([...orderList, { ...item, amount: 1, unitPrice: item.price }]);
   };
 
+  const resetOrderList = () => {
+    setOrderList([]);
+  };
+
+
   return (
     <>
       <section className="menu section bd-container" id="menu">
@@ -57,15 +61,23 @@ const Menu = () => {
 
         <div className="menu__container bd-grid">
           <ShopCard
-            img="/img1.png"
-            name="Ćupter"
+            img="/img1.webp"
+            name="Bijeli Ćupter"
             desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`}
             price={5}
             addToCart={addToCart}
           />
 
           <ShopCard
-            img="/img2.png"
+            img="/img1.webp"
+            name="Crveni Ćupter"
+            desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`}
+            price={5}
+            addToCart={addToCart}
+          />
+
+          <ShopCard
+            img="/img2.webp"
             name="Poklon Kutija"
             desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`}
             price={10}
@@ -73,7 +85,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="img4.png"
+            img="img4.webp"
             name="Tradicionalna vrećica"
             desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`}
             price={3}
@@ -81,7 +93,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="img3.png"
+            img="img3.webp"
             name="Paket Bijeli"
             desc={`30 komada bijelog ćuptera.\n - 30kom`}
             price={150}
@@ -89,7 +101,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="img3.png"
+            img="img3.webp"
             name="Paket Crveni"
             desc={`30 komada crvenog ćuptera.\n - 30kom`}
             price={150}
@@ -101,7 +113,7 @@ const Menu = () => {
       <section className="order">
         <h2 className="section-title"></h2>
         <div className="orderForm">
-          <OrderForm order={orderList} />
+          <OrderForm order={orderList} resetOrderList={resetOrderList} />
         </div>
       </section>
       {route === "/menu" && (
