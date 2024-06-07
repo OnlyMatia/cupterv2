@@ -1,115 +1,144 @@
 import { useState } from "react";
-import OrderForm from "../components/OrderForm"
-import ShopCard from "../components/ShopCard"
+import OrderForm from "../components/OrderForm";
+import ShopCard from "../components/ShopCard";
 import CartItem from "../components/CartItem";
 
 const Menu = () => {
-  const route = window.location.pathname
+  const route = window.location.pathname;
   const [isSidebarVisible, setSidebarVisible] = useState(false);
   const [orderList, setOrderList] = useState<any[]>([]);
 
   console.log(orderList);
-  
 
-  const deleteListItem = (id:number) => {
-    setOrderList(el => {
-      return el.filter((item, i) => {
-        return i !== id
+  const deleteListItem = (id: number) => {
+    setOrderList((el) => el.filter((item, i) => i !== id));
+  };
+
+  const increaseAmount = (id: number) => {
+    setOrderList((el) =>
+      el.map((item, i) => {
+        if (i === id) {
+          return { ...item, amount: item.amount + 1, price: item.price + item.unitPrice };
+        }
+        return item;
       })
-    })
-  }
+    );
+  };
+
+  const decreaseAmount = (id: number) => {
+    setOrderList((el) =>
+      el.map((item, i) => {
+        if (i === id) {
+          if (item.amount === 1) {
+            deleteListItem(id);
+            return null;
+          } else {
+            return { ...item, amount: item.amount - 1, price: item.price - item.unitPrice };
+          }
+        }
+        return item;
+      }).filter(item => item !== null)
+    );
+  };
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
   const addToCart = (item: any) => {
-    setOrderList([...orderList, item])
+    setOrderList([...orderList, { ...item, amount: 1, unitPrice: item.price }]);
   };
 
-  return (<>
-    <section className="menu section bd-container" id="menu">
-    <span className="section-subtitle">Ćupter cijene i ponude</span>
-    <h2 className="section-title">Šta vam nudimo</h2>
+  return (
+    <>
+      <section className="menu section bd-container" id="menu">
+        <span className="section-subtitle">Ćupter cijene i ponude</span>
+        <h2 className="section-title">Šta vam nudimo</h2>
 
-    <div className="menu__container bd-grid">
-      <ShopCard 
-        img="/img1.png"
-        name="Ćupter" 
-        desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`} 
-        price={5} 
-        addToCart={addToCart}/>
+        <div className="menu__container bd-grid">
+          <ShopCard
+            img="/img1.png"
+            name="Ćupter"
+            desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`}
+            price={5}
+            addToCart={addToCart}
+          />
 
-      <ShopCard 
-        img="/img2.png"
-        name="Poklon Kutija" 
-        desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`} 
-        price={10}
-        addToCart={addToCart}
-        />
+          <ShopCard
+            img="/img2.png"
+            name="Poklon Kutija"
+            desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`}
+            price={10}
+            addToCart={addToCart}
+          />
 
-      <ShopCard 
-        img="img4.png"
-        name="Tradicionalna vrećica" 
-        desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`} 
-        price={3}
-        addToCart={addToCart}
-        />
+          <ShopCard
+            img="img4.png"
+            name="Tradicionalna vrećica"
+            desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`}
+            price={3}
+            addToCart={addToCart}
+          />
 
-        <ShopCard 
-        img="img3.png"
-        name="Paket Bijeli" 
-        desc={`30 komada bijelog ćuptera.\n - 30kom`} 
-        price={150}
-        addToCart={addToCart}
-        />
+          <ShopCard
+            img="img3.png"
+            name="Paket Bijeli"
+            desc={`30 komada bijelog ćuptera.\n - 30kom`}
+            price={150}
+            addToCart={addToCart}
+          />
 
-        <ShopCard 
-        img="img3.png"
-        name="Paket Crveni" 
-        desc={`30 komada crvenog ćuptera.\n - 30kom`} 
-        price={150} 
-        addToCart={addToCart}
-        />
+          <ShopCard
+            img="img3.png"
+            name="Paket Crveni"
+            desc={`30 komada crvenog ćuptera.\n - 30kom`}
+            price={150}
+            addToCart={addToCart}
+          />
+        </div>
+      </section>
 
-
-    </div>
-</section>
-
-<section className="order">
-<h2 className="section-title"></h2>
-    <div className="orderForm">
-      <OrderForm order={orderList} />
-    </div>
-    
-</section>
-{route === "/menu" && (
+      <section className="order">
+        <h2 className="section-title"></h2>
+        <div className="orderForm">
+          <OrderForm order={orderList} />
+        </div>
+      </section>
+      {route === "/menu" && (
         <>
           <div className="fixed-letter" onClick={toggleSidebar}>
-          {isSidebarVisible ? <i  className='bx  bx-x cart'></i> : <i className='bx bx-cart-alt cart'></i>}
-         
+            {isSidebarVisible ? (
+              <i className="bx bx-x cart"></i>
+            ) : (
+              <div className="cart-icon-container">
+              <i className="bx bx-cart-alt cart"></i>
+                {orderList.length > 0 && (
+                  <span className="cart-indicator">{orderList.length}</span>
+                )}
+            </div>
+            )}
           </div>
-          <div className={`fixed-overlay ${isSidebarVisible ? 'visible' : ''}`}>
+          <div className={`fixed-overlay ${isSidebarVisible ? "visible" : ""}`}>
             <div className="fixed-content ">
-
-            {orderList.map((item, i) => (
+              {orderList.map((item, i) => (
                 <CartItem
                   key={i}
                   id={i}
                   img={item.img}
                   price={item.price}
+                  amount={item.amount}
+                  increaseAmount={increaseAmount}
+                  decreaseAmount={decreaseAmount}
                   delete={deleteListItem}
                 />
               ))}
-            
-
-            {/* ovdje dodajem ono sto je u kosarici */}
+              
             </div>
           </div>
         </>
       )}
-</>
-  )
-}
+    </>
+  );
+};
 
-export default Menu
+export default Menu;

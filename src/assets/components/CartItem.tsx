@@ -1,25 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const CartItem = (props:any) => {
-  const [amount, setAmount] = useState(1)
-  const [price, setPrice] = useState(props.price)
+const CartItem = (props: any) => {
+  const [amount, setAmount] = useState(props.amount);
+  const [price, setPrice] = useState(props.price);
 
+  useEffect(() => {
+    setAmount(props.amount);
+    setPrice(props.price);
+  }, [props.amount, props.price]);
 
-  function handleDecrease () {
-    if(amount===1){
-      props.delete(props.id)
-    }else{
-      setAmount(amount - 1);
-      setPrice(price - props.price)
-    }
+  function handleDecrease() {
+    props.decreaseAmount(props.id);
   }
 
   function handleIncrease() {
-    setAmount(amount + 1);
-    setPrice(price + props.price)
+    props.increaseAmount(props.id);
   }
-  
-  
+
   return (
     <div className="cart-item">
       <img src={props.img} className="cart-item__img" />
@@ -30,7 +27,7 @@ const CartItem = (props:any) => {
         <button onClick={handleIncrease} className="cart-item__btn">+</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CartItem
+export default CartItem;

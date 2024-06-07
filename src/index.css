@@ -635,7 +635,7 @@ img{
 }
 
 i.cart{
-  color: var(--text-color); 
+  color: #fff; 
 }
 
 .cart-item {
@@ -681,6 +681,27 @@ i.cart{
   width: 30px;
   text-align: center;
 }
+
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-indicator {
+  position: absolute;
+  bottom: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 9px;
+}
+
+
+
+
 
 /*========== MEDIA QUERIES ==========*/
 

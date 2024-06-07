@@ -1,17 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import emailjs from "@emailjs/browser"
 
 
 const OrderForm = (props:any) => {
     // const [mailSent, setMailSent] = useState<boolean>(false)
 
-    // let order = []  slanje niza narudžbe u emailjs formu
-
-    // props.order.forEach(el => {
-    //     order.push(`${el.name} = ${el.price}KM`)
-    // })
-    // console.log(order);
-    
 
     const [data, setData] = useState({
         user_name:"",
@@ -19,8 +12,22 @@ const OrderForm = (props:any) => {
         user_phone:"",
         user_address:"",
         user_message:"",
-        user_order:[],
+        user_order: "",
     })
+
+    useEffect(() => {
+        const generateUserOrder = () => {
+
+          const orderString = props.order.map((item: any) => `${item.name} - ${item.amount}`).join(", ");
+          setData((prev) => ({
+            ...prev,
+            user_order: orderString, 
+          }));
+        };
+    
+        generateUserOrder(); 
+      }, [props.order]);
+
 
     const handleChange = (event:any) => {
         const {name,value} = event.target;
@@ -46,7 +53,7 @@ const OrderForm = (props:any) => {
                 user_message:data.user_message,
                 user_phone: data.user_phone,
                 user_address: data.user_address,
-                // user_order: order,
+                user_order: data.user_order,
             })
         .then(() => {
             // setMailSent(true)
