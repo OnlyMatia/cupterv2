@@ -2,8 +2,16 @@ import { useState } from "react"
 import emailjs from "@emailjs/browser"
 
 
-const OrderForm = () => {
+const OrderForm = (props:any) => {
     // const [mailSent, setMailSent] = useState<boolean>(false)
+
+    // let order = []  slanje niza narudžbe u emailjs formu
+
+    // props.order.forEach(el => {
+    //     order.push(`${el.name} = ${el.price}KM`)
+    // })
+    // console.log(order);
+    
 
     const [data, setData] = useState({
         user_name:"",
@@ -11,7 +19,7 @@ const OrderForm = () => {
         user_phone:"",
         user_address:"",
         user_message:"",
-        user_order:"",
+        user_order:[],
     })
 
     const handleChange = (event:any) => {
@@ -38,7 +46,7 @@ const OrderForm = () => {
                 user_message:data.user_message,
                 user_phone: data.user_phone,
                 user_address: data.user_address,
-                user_order: data.user_order,
+                // user_order: order,
             })
         .then(() => {
             // setMailSent(true)

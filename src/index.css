@@ -541,7 +541,7 @@ img{
 
 
 .aboutBanners {
-  background-image: url(/public/aboutus.jpg);
+  background-image: url(/aboutus.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;

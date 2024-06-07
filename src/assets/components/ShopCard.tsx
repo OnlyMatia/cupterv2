@@ -1,15 +1,27 @@
+// import { useState } from "react";
+
 const ShopCard = (props: any) => {
   const route = window.location.pathname;
+  // const [toggle, setToggle] = useState(false)
 
   const handleClick = () => {
     props.addToCart({
       name: props.name,
       price: props.price,
+      img:props.img,
     });
   };
 
+  // const handleIn = () => {
+  //   setToggle(true)
+  // }
+  // const handleOut = () => {
+  //   setToggle(false)
+  // }
+
   return (
     <div className="menu__content">
+        {/* { props.img === "/img1.png" ? <img src={!toggle ? props.img : "/img2.png"} alt="" className="menu__img" onMouseEnter={handleIn} onMouseLeave={handleOut} /> : <img src={props.img} alt="" className="menu__img" />} */}
         <img src={props.img} alt="" className="menu__img" />
         <h3 className="menu__name">{props.name}</h3>
         <span className="menu__detail">{props.desc}</span>

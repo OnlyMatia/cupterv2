@@ -1,19 +1,24 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const CartItem = (props:any) => {
   const [amount, setAmount] = useState(1)
   const [price, setPrice] = useState(props.price)
 
+
   function handleDecrease () {
-    setAmount(amount - 1);
-    setPrice(price - props.price)
+    if(amount===1){
+      props.delete(props.id)
+    }else{
+      setAmount(amount - 1);
+      setPrice(price - props.price)
+    }
   }
 
   function handleIncrease() {
     setAmount(amount + 1);
     setPrice(price + props.price)
   }
-
+  
   
   return (
     <div className="cart-item">

@@ -1,19 +1,30 @@
 import { useState } from "react";
 import OrderForm from "../components/OrderForm"
 import ShopCard from "../components/ShopCard"
-// import CartItem from "../components/CartItem";
+import CartItem from "../components/CartItem";
 
 const Menu = () => {
   const route = window.location.pathname
   const [isSidebarVisible, setSidebarVisible] = useState(false);
-  let orderList = []
+  const [orderList, setOrderList] = useState<any[]>([]);
+
+  console.log(orderList);
+  
+
+  const deleteListItem = (id:number) => {
+    setOrderList(el => {
+      return el.filter((item, i) => {
+        return i !== id
+      })
+    })
+  }
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
-  const addToCart = (item:any) => {
-    console.log("Added to cart:", item);
+  const addToCart = (item: any) => {
+    setOrderList([...orderList, item])
   };
 
   return (<>
@@ -68,7 +79,7 @@ const Menu = () => {
 <section className="order">
 <h2 className="section-title"></h2>
     <div className="orderForm">
-      <OrderForm />
+      <OrderForm order={orderList} />
     </div>
     
 </section>
@@ -80,6 +91,16 @@ const Menu = () => {
           </div>
           <div className={`fixed-overlay ${isSidebarVisible ? 'visible' : ''}`}>
             <div className="fixed-content ">
+
+            {orderList.map((item, i) => (
+                <CartItem
+                  key={i}
+                  id={i}
+                  img={item.img}
+                  price={item.price}
+                  delete={deleteListItem}
+                />
+              ))}
             
 
             {/* ovdje dodajem ono sto je u kosarici */}

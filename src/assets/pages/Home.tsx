@@ -57,7 +57,7 @@ const Home = () => {
                         <a href="/about" className="button">Više o nama</a>
                     </div>
 
-                    <img src="\aboutus2.jpg" alt="" className="about__img" />
+                    <img src="/aboutus2.jpg" alt="" className="about__img" />
                 </div>
             </section>
 
