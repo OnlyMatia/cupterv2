@@ -63,7 +63,7 @@ const Menu = () => {
           <ShopCard
             img="/img1.webp"
             name="Bijeli Ćupter"
-            desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`}
+            desc={`Jedan komad ćuptera okusa žilavke, 100g - 1kom (100g)`}
             price={5}
             addToCart={addToCart}
           />
@@ -71,7 +71,7 @@ const Menu = () => {
           <ShopCard
             img="/img1.webp"
             name="Crveni Ćupter"
-            desc={`Jedan komad ćuptera bijeli ili crveni - 1kom (100g)`}
+            desc={`Jedan komad ćuptera okusa blatine, 100g - 1kom (100g)`}
             price={5}
             addToCart={addToCart}
           />

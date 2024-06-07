@@ -364,7 +364,7 @@ const Home = () => {
                     <ShopCard 
                     img="/img1.webp"
                     name="Bijeli Ćupter" 
-                    desc={`1 komad ćuptera od okusa žilavke, 100g.\n -1kom`} 
+                    desc={`1 komad ćuptera od okusa žilavke ili blatine, 100g.\n -1kom`} 
                     price={5} />
 
                     <ShopCard 
