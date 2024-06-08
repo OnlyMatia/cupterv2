@@ -362,19 +362,19 @@ const Home = () => {
 
                 <div className="menu__container bd-grid">
                     <ShopCard 
-                    img="/ćupter-ponuda1.webp"
+                    img="cupter-ponuda1.webp"
                     name="Bijeli Ćupter" 
                     desc={`1 komad ćuptera od okusa žilavke ili blatine, 100g.\n -1kom`} 
                     price={5} />
 
                     <ShopCard 
-                    img="ćupter-ponuda2.webp"
+                    img="cupter-ponuda2.webp"
                     name="Poklon Kutija" 
                     desc={`2 komada ćuptera žilavka i blatina, 200g.\n -2kom`} 
                     price={10} />
                     
                     <ShopCard 
-                    img="ćupter-ponuda3.webp"
+                    img="cupter-ponuda3.webp"
                     name="Full Box" 
                     desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
                     price={150} />
