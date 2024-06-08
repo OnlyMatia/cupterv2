@@ -61,7 +61,7 @@ const Menu = () => {
 
         <div className="menu__container bd-grid">
           <ShopCard
-            img="/img1.webp"
+            img="/ćupter-ponuda1.webp"
             name="Bijeli Ćupter"
             desc={`Jedan komad ćuptera okusa žilavke, 100g - 1kom (100g)`}
             price={5}
@@ -69,7 +69,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="/img1.webp"
+            img="/ćupter-ponuda1.webp"
             name="Crveni Ćupter"
             desc={`Jedan komad ćuptera okusa blatine, 100g - 1kom (100g)`}
             price={5}
@@ -77,7 +77,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="/img2.webp"
+            img="/ćupter-ponuda2.webp"
             name="Poklon Kutija"
             desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`}
             price={10}
@@ -85,7 +85,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="img4.webp"
+            img="ćupter-ponuda4.webp"
             name="Tradicionalna vrećica"
             desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`}
             price={3}
@@ -93,7 +93,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="img3.webp"
+            img="ćupter-ponuda3.webp"
             name="Paket Bijeli"
             desc={`30 komada bijelog ćuptera.\n - 30kom`}
             price={150}
@@ -101,7 +101,7 @@ const Menu = () => {
           />
 
           <ShopCard
-            img="img3.webp"
+            img="ćupter-ponuda3.webp"
             name="Paket Crveni"
             desc={`30 komada crvenog ćuptera.\n - 30kom`}
             price={150}

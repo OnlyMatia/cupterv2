@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <p className="footer__copy">&#169; 2016 - {new Date().getFullYear()}. All right reserved</p>
+            <p className="footer__copy">&#169; 2016 - {new Date().getFullYear()}. All right reserved - Hercegovačka izba</p>
         </footer>
   )
 }

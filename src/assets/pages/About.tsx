@@ -51,7 +51,7 @@ const About = () => {
     // {
     //   id:4,
     //   title:"Zaštićena oznaka porijekla (ZOP)",
-    //   img:"/zop.png",
+    //   img:"/zop-zasticenaOznakaPorijekla.webp",
     //   desc:"S ponosom ističemo da je hercegovački cupter dobitnik zaštićene oznake podrijetla (ZOP). Proizvod sa oznakom ZOP je u cijelosti proizveden u određenom geografskom području primjenom priznatih vještina i korištenjem sirovina i sastojaka koji također potiču iz tog područja. Kvaliteta proizvoda označenog ovom oznakom direktno je povezan prirodnim i ljudskim faktorima geografskog područja proizvodnje.",
     // }
 ]

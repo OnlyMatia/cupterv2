@@ -43,7 +43,7 @@ const Home = () => {
                         <a href="#about" className="button">Otkrij Više</a>
                     </div>
     
-                    <img src="\home1.png" alt="\home1.png" className="home__img" />
+                    <img src="\slikaCuptera.png" alt="/slikaCuptera.png" className="home__img" />
                 </div>
             </section>
             
@@ -57,7 +57,7 @@ const Home = () => {
                         <a href="/about" className="button">Više o nama</a>
                     </div>
 
-                    <img src="/aboutus2.webp" alt="/aboutus2.jpg" className="about__img" />
+                    <img src="/slikaCuptera2.webp" alt="/aboutus2.jpg" className="about__img" />
                 </div>
             </section>
 
@@ -362,19 +362,19 @@ const Home = () => {
 
                 <div className="menu__container bd-grid">
                     <ShopCard 
-                    img="/img1.webp"
+                    img="/ćupter-ponuda1.webp"
                     name="Bijeli Ćupter" 
                     desc={`1 komad ćuptera od okusa žilavke ili blatine, 100g.\n -1kom`} 
                     price={5} />
 
                     <ShopCard 
-                    img="img2.webp"
+                    img="ćupter-ponuda2.webp"
                     name="Poklon Kutija" 
                     desc={`2 komada ćuptera žilavka i blatina, 200g.\n -2kom`} 
                     price={10} />
                     
                     <ShopCard 
-                    img="img3.webp"
+                    img="ćupter-ponuda3.webp"
                     name="Full Box" 
                     desc={`30 komada ćuptera žilavka ili blatina.\n -30kom`} 
                     price={150} />

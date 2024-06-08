@@ -12,6 +12,7 @@ const ShopCard = (props: any) => {
     });
   };
 
+  // Hover effect na slike kartica
   // const handleIn = () => {
   //   setToggle(true)
   // }
