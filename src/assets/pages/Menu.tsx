@@ -10,7 +10,7 @@ const Menu = () => {
 
 
   const deleteListItem = (id: number) => {
-    setOrderList((el) => el.filter((item, i) => i !== id));
+    setOrderList((el) => el.filter((i) => i !== id));
   };
 
   const increaseAmount = (id: number) => {
