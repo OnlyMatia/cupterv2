@@ -59,7 +59,7 @@ const ContactForm = () => {
         <textarea name="user_message" className="formInput bigInput" onChange={handleChange} required />
       </div>
 
-      <input type="submit" value="Send" className="submitBtn" />
+      <input type="submit" value="Pošalji" className="submitBtn" />
     </form>
   )
 }

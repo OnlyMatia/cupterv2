@@ -2,6 +2,7 @@ import { useState } from "react";
 import OrderForm from "../components/OrderForm";
 import ShopCard from "../components/ShopCard";
 import CartItem from "../components/CartItem";
+import { Helmet } from "react-helmet";
 
 const Menu = () => {
   const route = window.location.pathname;
@@ -55,9 +56,13 @@ const Menu = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Cijene i ponude cuptera</title>
+        <meta name="description" content="Otkrijte naše ponude proizvoda koje možete jednostavno naručiti online. Pregledajte naš asortiman i odaberite svoje omiljene proizvode iz udobnosti svog doma. Brza isporuka i sigurna kupovina." />
+      </Helmet>
       <section className="menu section bd-container" id="menu">
-        <span className="section-subtitle">Ćupter cijene i ponude</span>
-        <h2 className="section-title">Šta vam nudimo</h2>
+        <span className="section-subtitle">Šta vam nudimo</span>
+        <h1 className="section-title">Naručite online</h1>
 
         <div className="menu__container bd-grid">
           <ShopCard

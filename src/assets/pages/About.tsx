@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Article from "../components/Article"
+import { Helmet } from "react-helmet"
 
 const About = () => {
   useEffect(() => {
@@ -58,6 +59,10 @@ const About = () => {
 
   return (
   <>
+    <Helmet>
+      <title>O Nama i Cupteru</title>
+      <meta name="description" content="Saznajte više o Hercegovačkoj Izbi i našem specijalitetu, Cupter - slastica od grožđa koja predstavlja autentični ukus Hercegovine." />
+    </Helmet>
     <section className="aboutBanners">
         <h2 className="bannerH2">Naša Priča</h2>
     </section>
