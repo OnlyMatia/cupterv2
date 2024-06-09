@@ -61,7 +61,7 @@ const About = () => {
   <>
     <Helmet>
       <title>O Nama i Cupteru</title>
-      <meta name="description" content="Saznajte više o Hercegovačkoj Izbi i našem specijalitetu, Cupter - slastica od grožđa koja predstavlja autentični ukus Hercegovine." />
+      <meta name="description" content="Saznajte više o Hercegovačkoj Izbi, Cupteru, njegovom receptu i budućim ciljevima." />
     </Helmet>
     <section className="aboutBanners">
         <h2 className="bannerH2">Naša Priča</h2>
