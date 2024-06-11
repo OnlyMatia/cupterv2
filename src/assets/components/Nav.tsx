@@ -9,6 +9,13 @@ const Nav = () => {
   const [icon, setIcon] = useState('bx-moon');
 
   useEffect(() => {
+    const currentHour = new Date().getHours();
+    if (currentHour >= 19 || currentHour < 5) {
+      setTheme('dark');
+      setIcon('bx-sun');
+      document.body.classList.add(darkTheme);
+    }
+
     const selectedTheme = localStorage.getItem('selected-theme');
     const selectedIcon = localStorage.getItem('selected-icon');
 

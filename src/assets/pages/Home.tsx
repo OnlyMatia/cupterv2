@@ -49,7 +49,7 @@ const Home = () => {
                         <a href="#about" className="button">Otkrij Više</a>
                     </div>
     
-                    <img src="\slikaCuptera.png" alt="/slikaCuptera.png" className="home__img" />
+                    <img src="\slikaCuptera.webp" alt="/slikaCuptera.webp" className="home__img" />
                 </div>
             </section>
             

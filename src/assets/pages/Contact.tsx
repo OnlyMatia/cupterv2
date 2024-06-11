@@ -30,9 +30,9 @@ const Contact = () => {
 
       <div className="contactText">
         <h2 className="section-title contact__initial">Kontaktirajte nas  </h2>
-        <p className="contact__description">Ako imate pitanja, trebate dodatne informacije ili želite napraviti narudžbu, slobodno nas kontaktirajte. <br /> Rado ćemo vam pomoći i odgovoriti što prije.</p>
-        <p className="contact__description">Telefon: +387 63 319 290 </p>
-        <p className="contact__description">Email: hercegovacka.izba@gmail.com</p>
+        <p className="contact__description">Ako imate pitanja, trebate dodatne informacije ili želite napraviti narudžbu, slobodno nas kontaktirajte. Rado ćemo vam pomoći i odgovoriti što prije.</p>
+        <p className="contact__description important">Telefon: +387 63 319 290 </p>
+        <p className="contact__description important">Email: hercegovacka.izba@gmail.com</p>
       </div>
       
       <ContactForm />

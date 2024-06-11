@@ -79,19 +79,19 @@ const OrderForm = (props:any) => {
 
       <div className="formDivs">
         <label className="formLabel">Ime i Prezime:</label>
-        <input type="text" name="user_name" className="formInput smallInput" onChange={handleChange} required />
+        <input type="text" name="user_name" className="formInput smallInput" onChange={handleChange} required placeholder="John Doe" />
       </div>
      <div className="formDivs">
         <label className="formLabel">Email:</label>
-        <input type="email" name="user_email" className="formInput smallInput" onChange={handleChange}  required />
+        <input type="email" name="user_email" className="formInput smallInput" onChange={handleChange}  required placeholder="John@gmail.com"/>
      </div>
      <div className="formDivs">
         <label className="formLabel">Broj telefona:</label>
-        <input type="tel" name="user_phone" className="formInput smallInput" onChange={handleChange}  required />
+        <input type="tel" name="user_phone" className="formInput smallInput" onChange={handleChange}  required placeholder="063 456 789"/>
      </div>
      <div className="formDivs">
         <label className="formLabel">Adresa:</label>
-        <input type="text" name="user_address" className="formInput smallInput" onChange={handleChange}  required />
+        <input type="text" name="user_address" className="formInput smallInput" onChange={handleChange}  required placeholder="Ulica Kardinala Stepinca, Mostar" />
      </div>
 
       <input type="submit" value="Naruči" className="submitBtn" />

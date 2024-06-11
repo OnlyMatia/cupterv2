@@ -507,7 +507,7 @@ img{
 .smallInput {
   border-radius: 3px;
   font-weight: 500;
-  padding: 5px;
+  padding: 10px;
 }
 
 .bigInput {
@@ -524,6 +524,7 @@ img{
 }
 
 .submitBtn {
+  font-size: var(--normal-font-size);
   display: block;
   background-color: var(--first-color);
   color: #FFF;
@@ -801,7 +802,7 @@ i.cart{
 
   .menu__container{
     grid-template-columns: repeat(3, 210px);
-    column-gap: 4rem;
+    column-gap: 3rem;
   }
   .menu__content{
     padding: 1.5rem;

@@ -48,11 +48,11 @@ const ContactForm = () => {
 
       <div className="formDivs">
         <label className="formLabel">Ime i Prezime:</label>
-        <input type="text" name="user_name" className="formInput smallInput" onChange={handleChange} required />
+        <input type="text" name="user_name" className="formInput smallInput" onChange={handleChange} required placeholder="John Doe" />
       </div>
      <div className="formDivs">
         <label className="formLabel">Email:</label>
-        <input type="email" name="user_email" className="formInput smallInput" onChange={handleChange}  required />
+        <input type="email" name="user_email" className="formInput smallInput" onChange={handleChange}  required placeholder="John@gmail.com" />
      </div>
       <div className="formDivs">
         <label className="formLabel">Poruka:</label>
