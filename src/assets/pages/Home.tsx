@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ShopCard from "../components/ShopCard";
+import { Helmet } from "react-helmet";
 
 declare global {
     interface Window {
@@ -33,6 +34,11 @@ const Home = () => {
     
 
   return (
+    <>
+    <Helmet>
+      <title>Ćupter - Tradicionalna Slastica iz Hercegovine</title>
+      <meta name="description" content="Otkrijte ćupter, njegovo podrijetlo i bogatstvo povijesti. Saznajte više o Hercegovačkoj Izbi i kako naručiti ovu autentičnu deliciju." />
+    </Helmet>
     <main className="l-main">
             
             <section className="home" id="home">
@@ -396,7 +402,8 @@ const Home = () => {
                 </div>
             </section>
         </main>
-  )
+        </>
+    )
 }
 
 export default Home
