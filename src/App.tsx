@@ -2,6 +2,7 @@
 import {
   createBrowserRouter,
   RouterProvider,
+  Navigate
 } from "react-router-dom";
 
 import Nav from "./assets/components/Nav";
@@ -15,7 +16,6 @@ import NotFound from "./assets/pages/NotFound";
 
 const router = createBrowserRouter([
   {path: "/", element:<Home />, errorElement: <NotFound />},
-  {path: "/home", element: <Home />, errorElement: <NotFound />},
   {path: "/contact", element: <Contact />, errorElement: <NotFound />},
   {path: "/about", element: <About />, errorElement: <NotFound />},
   {path:"/menu", element: <Menu />, errorElement: <NotFound />},

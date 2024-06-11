@@ -46,7 +46,7 @@ const Nav = () => {
 
         <div className={smallMenu ? 'nav__menu' : 'nav__menu show-menu'} id="nav-menu">
           <ul className="nav__list">
-            <li className="nav__item"><a href="/home" className={`nav__link ${route === "/home" || route==="/" ? "active-link" : ""}`}>Početna</a></li>
+            <li className="nav__item"><a href="/" className={`nav__link ${route === "/home" || route==="/" ? "active-link" : ""}`}>Početna</a></li>
             <li className="nav__item"><a href="/about" className={`nav__link ${route === "/about" ? "active-link" : ""}`}>O nama</a></li>
             {/* <li className="nav__item"><a href="/services" className="nav__link">Usluge</a></li> */}
             <li className="nav__item"><a href="/menu" className={`nav__link ${route === "/menu" ? "active-link" : ""}`}>Meni</a></li>
