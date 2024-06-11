@@ -3,6 +3,8 @@ import OrderForm from "../components/OrderForm";
 import ShopCard from "../components/ShopCard";
 import CartItem from "../components/CartItem";
 import { Helmet } from "react-helmet";
+import { Slide, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Menu = () => {
   const route = window.location.pathname;
@@ -10,6 +12,9 @@ const Menu = () => {
   const [orderList, setOrderList] = useState<any[]>([]);
   const fixedOverlayRef = useRef<HTMLDivElement>(null);
 
+  const notify = () => {toast("Nadodano u košaricu!",
+    {progressStyle:{background:"#aa7209"}},
+  )}
 
   const deleteListItem = (id: number) => {
     setOrderList((el) => el.filter((i) => i !== id));
@@ -95,6 +100,7 @@ const Menu = () => {
             desc={`Jedan komad ćuptera okusa žilavke, 100g - 1kom (100g)`}
             price={5}
             addToCart={addToCart}
+            toast={notify}
           />
 
           <ShopCard
@@ -103,6 +109,7 @@ const Menu = () => {
             desc={`Jedan komad ćuptera okusa blatine, 100g - 1kom (100g)`}
             price={5}
             addToCart={addToCart}
+            toast={notify}
           />
 
           <ShopCard
@@ -111,6 +118,7 @@ const Menu = () => {
             desc={`Dva komada ćuptera bijeli, crveni ili kombinacija\n - 2kom (200g)`}
             price={10}
             addToCart={addToCart}
+            toast={notify}
           />
 
           <ShopCard
@@ -119,6 +127,7 @@ const Menu = () => {
             desc={`Papirna vrećica sa tradicionalnim uzorkom - 1kom`}
             price={3}
             addToCart={addToCart}
+            toast={notify}
           />
 
           <ShopCard
@@ -127,6 +136,7 @@ const Menu = () => {
             desc={`30 komada bijelog ćuptera.\n - 30kom`}
             price={150}
             addToCart={addToCart}
+            toast={notify}
           />
 
           <ShopCard
@@ -135,6 +145,7 @@ const Menu = () => {
             desc={`30 komada crvenog ćuptera.\n - 30kom`}
             price={150}
             addToCart={addToCart}
+            toast={notify}
           />
         </div>
         <div className="orderText">
@@ -181,6 +192,13 @@ const Menu = () => {
           </div>
         </>
       )}
+      <ToastContainer 
+        position="bottom-left"
+        autoClose={1000}
+        pauseOnFocusLoss={false}
+        transition={Slide}
+        
+      />
     </>
   );
 };

@@ -10,6 +10,7 @@ const ShopCard = (props: any) => {
       price: props.price,
       img:props.img,
     });
+    props.toast()
   };
 
   // Hover effect na slike kartica
