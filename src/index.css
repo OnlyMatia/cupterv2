@@ -639,6 +639,7 @@ i.cart{
 }
 
 .cart-item {
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -701,6 +702,7 @@ i.cart{
 
 .cartTitle{
   padding: 1rem;
+  color: #fff;
 }
 
 
