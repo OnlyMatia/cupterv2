@@ -1,8 +1,7 @@
 
 import {
   createBrowserRouter,
-  RouterProvider,
-  Navigate
+  RouterProvider
 } from "react-router-dom";
 
 import Nav from "./assets/components/Nav";
