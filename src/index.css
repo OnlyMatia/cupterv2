@@ -616,7 +616,7 @@ img{
   right: -300px; 
   width: 300px;
   height: 100%;
-  background-color:#865804b7; 
+  background-color:#865804fa; 
   display: flex;
   flex-direction: row;
   z-index: 1000; 
@@ -699,7 +699,9 @@ i.cart{
   font-size: 9px;
 }
 
-
+.cartTitle{
+  padding: 1rem;
+}
 
 
 

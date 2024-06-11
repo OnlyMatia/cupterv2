@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import OrderForm from "../components/OrderForm";
 import ShopCard from "../components/ShopCard";
 import CartItem from "../components/CartItem";
@@ -8,6 +8,7 @@ const Menu = () => {
   const route = window.location.pathname;
   const [isSidebarVisible, setSidebarVisible] = useState(false);
   const [orderList, setOrderList] = useState<any[]>([]);
+  const fixedOverlayRef = useRef<HTMLDivElement>(null);
 
 
   const deleteListItem = (id: number) => {
@@ -52,6 +53,29 @@ const Menu = () => {
   const resetOrderList = () => {
     setOrderList([]);
   };
+
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (window.innerWidth < 950 && fixedOverlayRef.current && !fixedOverlayRef.current.contains(event.target as Node) && isSidebarVisible) {
+      setSidebarVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 950 && isSidebarVisible) {
+        setSidebarVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isSidebarVisible]);
 
 
   return (
@@ -135,8 +159,9 @@ const Menu = () => {
             </div>
             )}
           </div>
-          <div className={`fixed-overlay ${isSidebarVisible ? "visible" : ""}`}>
+          <div className={`fixed-overlay ${isSidebarVisible ? "visible" : ""}`} ref={fixedOverlayRef}>
             <div className="fixed-content ">
+              <h2 className="cartTitle">Moja Košarica:</h2>
               {orderList.map((item, i) => (
                 <CartItem
                   key={i}
