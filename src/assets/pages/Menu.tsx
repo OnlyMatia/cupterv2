@@ -86,7 +86,7 @@ const Menu = () => {
       </Helmet>
       <section className="menu section bd-container" id="menu">
         <span className="section-subtitle">Šta vam nudimo</span>
-        <h1 className="section-title">Naručite online</h1>
+        <h1 className="section-title">Naručite online najdražu slasticu.</h1>
 
         <div className="menu__container bd-grid">
           <ShopCard
@@ -137,10 +137,12 @@ const Menu = () => {
             addToCart={addToCart}
           />
         </div>
+        <div className="orderText">
+          <h2>Nakon što ste dodali proizvode u korpu, molimo vas da popunite svoje podatke u formi ispod kako bismo mogli da obradimo vašu narudžbu.</h2>
+        </div>
       </section>
 
       <section className="order">
-        <h2 className="section-title"></h2>
         <div className="orderForm">
           <OrderForm order={orderList} resetOrderList={resetOrderList} />
         </div>

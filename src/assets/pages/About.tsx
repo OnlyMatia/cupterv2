@@ -64,7 +64,7 @@ const About = () => {
       <meta name="description" content="Saznajte više o Hercegovačkoj Izbi, Cupteru, njegovom receptu i budućim ciljevima." />
     </Helmet>
     <section className="aboutBanners">
-        <h2 className="bannerH2">Naša Priča</h2>
+        <h1 className="bannerH2">Naša Priča</h1>
     </section>
 
     <section className="about section bd-container">

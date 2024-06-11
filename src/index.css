@@ -706,7 +706,12 @@ i.cart{
   color: #fff;
 }
 
-
+.orderText{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5rem;
+}
 
 /*========== MEDIA QUERIES ==========*/
 
