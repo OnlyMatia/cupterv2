@@ -43,27 +43,32 @@ const OrderForm = (props:any) => {
     const sendEmail = (e:any) => {
         e.preventDefault()
         
-        emailjs.init(import.meta.env.VITE_EMAIL_USER_ID)
-        emailjs.send(
-            import.meta.env.VITE_EMAIL_SERVICE_ID,
-            import.meta.env.VITE_BUY_TEMPLATE_ID,
-            {
-                user_name: data.user_name,
-                user_email:data.user_email,
-                user_message:data.user_message,
-                user_phone: data.user_phone,
-                user_address: data.user_address,
-                user_order: data.user_order,
-            })
-        .then(() => {
-            setMailSent(true)
-            props.resetOrderList();
-            console.log("sent");
-        })
-        .catch((error) => {
-            setMailFail(true)
-            console.log(error);
-        })
+
+        if(props.order.length < 1){
+          alert("Izaberite proizvod koji želite kupiti klikom na dugme cart")
+        }else{
+          emailjs.init(import.meta.env.VITE_EMAIL_USER_ID)
+          emailjs.send(
+              import.meta.env.VITE_EMAIL_SERVICE_ID,
+              import.meta.env.VITE_BUY_TEMPLATE_ID,
+              {
+                  user_name: data.user_name,
+                  user_email:data.user_email,
+                  user_message:data.user_message,
+                  user_phone: data.user_phone,
+                  user_address: data.user_address,
+                  user_order: data.user_order,
+              })
+          .then(() => {
+              setMailSent(true)
+              props.resetOrderList();
+              console.log("sent");
+          })
+          .catch((error) => {
+              setMailFail(true)
+              console.log(error);
+          })
+        }
     }
 
 
